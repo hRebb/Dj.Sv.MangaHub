@@ -12,8 +12,6 @@ class ClassificationSerializer(serializers.Serializer):
         fields = '__all__'
 
 class BookSerializer(serializers.ModelSerializer):
-    genres = GenreSerializer(many=True)
-
     class Meta:
         model = Book
         fields = '__all__'
