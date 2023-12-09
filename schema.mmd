@@ -1,0 +1,21 @@
+classDiagram
+    class Genre {
+        + id: Integer
+        + name: String
+    }
+
+    class Classification {
+        + id: Integer
+        + name: String
+    }
+
+    class Book {
+        + id: Integer
+        + title: String
+        + author: String
+        + rating: Decimal
+        + read: Boolean
+    }
+
+    Genre --o Book: belongs to
+    Classification --o Book: belongs to
