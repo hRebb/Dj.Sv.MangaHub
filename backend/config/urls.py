@@ -23,7 +23,7 @@ from api.views import BookViewSet, GenreViewSet, ClassificationViewSet
 
 router = DefaultRouter()
 router.register(r'books', BookViewSet)
-router.register(r'genres', GenreViewSet)
+router.register(r'genre', GenreViewSet)
 router.register(r'classifications', ClassificationViewSet)
 
 urlpatterns = [
