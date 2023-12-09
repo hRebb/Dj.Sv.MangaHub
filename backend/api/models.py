@@ -6,10 +6,17 @@ class Genre(models.Model):
 
     def __str__(self):
         return self.name
+    
+class Classification(models.Model):
+    name = models.CharField(max_length=255)
+
+    def __str__(self):
+        return self.name
 
 class Book(models.Model):
     title = models.CharField(max_length=255)
     author = models.CharField(max_length=255)
     genre = models.ManyToManyField(Genre)
+    classification = models.ForeignKey(Classification, on_delete=models.CASCADE, null=True)
     rating = models.DecimalField(max_digits=2, decimal_places=1)
     read = models.BooleanField(default=False)
