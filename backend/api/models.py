@@ -17,6 +17,6 @@ class Book(models.Model):
     title = models.CharField(max_length=255)
     author = models.CharField(max_length=255)
     genre = models.ManyToManyField(Genre)
-    classification = models.ForeignKey(Classification, on_delete=models.CASCADE, null=True)
+    classification = models.ManyToManyField(Classification)
     rating = models.DecimalField(max_digits=2, decimal_places=1)
     read = models.BooleanField(default=False)
