@@ -1,1 +1,504 @@
-[{"model": "contenttypes.contenttype", "pk": 1, "fields": {"app_label": "admin", "model": "logentry"}}, {"model": "contenttypes.contenttype", "pk": 2, "fields": {"app_label": "auth", "model": "permission"}}, {"model": "contenttypes.contenttype", "pk": 3, "fields": {"app_label": "auth", "model": "group"}}, {"model": "contenttypes.contenttype", "pk": 4, "fields": {"app_label": "auth", "model": "user"}}, {"model": "contenttypes.contenttype", "pk": 5, "fields": {"app_label": "contenttypes", "model": "contenttype"}}, {"model": "contenttypes.contenttype", "pk": 6, "fields": {"app_label": "sessions", "model": "session"}}, {"model": "contenttypes.contenttype", "pk": 7, "fields": {"app_label": "api", "model": "book"}}, {"model": "contenttypes.contenttype", "pk": 8, "fields": {"app_label": "api", "model": "genre"}}, {"model": "contenttypes.contenttype", "pk": 9, "fields": {"app_label": "api", "model": "classification"}}, {"model": "sessions.session", "pk": "rtxy5g1rw9xecthsx717d952di8iiv2i", "fields": {"session_data": ".eJxVjDsOwyAQRO9CHSG85psyvc-AYBcHJxFIxq6i3D1YcpFUI715M2_mw75lv7e0-oXYlQ3s8stiwGcqR0GPUO6VYy3bukR-KPxsG58qpdftdP8Ocmi5r4XFUUSHQGoUoBRCUkHj4EYLkoCsEakTI5EQtJYY7dzDzkZZZwjY5wvMozdS:1rBzzz:pNvvQJ9FE0FVL2KYvehMzNcxRx9_6zFymiLQpbeJlPI", "expire_date": "2023-12-23T16:16:15.201Z"}}, {"model": "api.genre", "pk": 1, "fields": {"name": "Action"}}, {"model": "api.genre", "pk": 2, "fields": {"name": "Aventure"}}, {"model": "api.genre", "pk": 3, "fields": {"name": "Historique"}}, {"model": "api.genre", "pk": 4, "fields": {"name": "Mystère"}}, {"model": "api.genre", "pk": 5, "fields": {"name": "Policier"}}, {"model": "api.genre", "pk": 6, "fields": {"name": "Surnaturel"}}, {"model": "api.genre", "pk": 7, "fields": {"name": "SciFi"}}, {"model": "api.genre", "pk": 8, "fields": {"name": "Horreur"}}, {"model": "api.genre", "pk": 9, "fields": {"name": "Drame"}}, {"model": "api.genre", "pk": 10, "fields": {"name": "Post-Apocalyptique"}}, {"model": "api.genre", "pk": 11, "fields": {"name": "Dystopie"}}, {"model": "api.genre", "pk": 12, "fields": {"name": "Fantastique"}}, {"model": "api.genre", "pk": 13, "fields": {"name": "Comédie"}}, {"model": "api.genre", "pk": 14, "fields": {"name": "Ecole"}}, {"model": "api.genre", "pk": 15, "fields": {"name": "Tranche de vie"}}, {"model": "api.genre", "pk": 16, "fields": {"name": "Cyberpunk"}}, {"model": "api.classification", "pk": 1, "fields": {"name": "Shonen"}}, {"model": "api.classification", "pk": 2, "fields": {"name": "Shojo"}}, {"model": "api.classification", "pk": 3, "fields": {"name": "Seinen"}}, {"model": "api.classification", "pk": 4, "fields": {"name": "Manhwa"}}, {"model": "api.book", "pk": 1, "fields": {"title": "Vinland Saga", "author": "Makoto Yukimura", "rating": "4.8", "read": true, "genre": [1, 2, 3], "classification": [1]}}, {"model": "api.book", "pk": 2, "fields": {"title": "Death Note", "author": "Tsugumi Ohba", "rating": "4.3", "read": true, "genre": [4, 5, 6], "classification": [3]}}, {"model": "api.book", "pk": 3, "fields": {"title": "Gunmm", "author": "Yukito Kishiro", "rating": "4.8", "read": true, "genre": [1, 2, 7, 11, 16], "classification": [3]}}, {"model": "api.book", "pk": 4, "fields": {"title": "Berserk", "author": "Kentaro Miura", "rating": "5.0", "read": true, "genre": [1, 2, 6, 8], "classification": [3]}}, {"model": "api.book", "pk": 5, "fields": {"title": "Shingeki no Kyojin", "author": "Hajime Isayama", "rating": "4.7", "read": true, "genre": [1, 8, 9, 10, 11], "classification": [1]}}, {"model": "api.book", "pk": 6, "fields": {"title": "One Piece", "author": "Eiichiro Oda", "rating": "5.0", "read": true, "genre": [1, 2, 12], "classification": [1]}}, {"model": "api.book", "pk": 7, "fields": {"title": "Fairy Tail", "author": "Hiro Mashima", "rating": "4.6", "read": true, "genre": [1, 2, 12], "classification": [1]}}, {"model": "api.book", "pk": 8, "fields": {"title": "Naruto", "author": "Masashi Kishimoto", "rating": "4.7", "read": true, "genre": [1, 2, 12], "classification": [1]}}, {"model": "api.book", "pk": 9, "fields": {"title": "Dragon Ball", "author": "Akira Toriyama", "rating": "4.8", "read": true, "genre": [1, 2, 12], "classification": [1]}}, {"model": "api.book", "pk": 10, "fields": {"title": "Great Teacher Onizuka", "author": "Tohru Fujisawa", "rating": "5.0", "read": true, "genre": [13, 14, 15], "classification": [1]}}, {"model": "api.book", "pk": 11, "fields": {"title": "Hunter x Hunter", "author": "Yoshihiro Togashi", "rating": "4.9", "read": true, "genre": [1, 2, 12], "classification": [1]}}, {"model": "api.book", "pk": 12, "fields": {"title": "Fullmetal Alchemist", "author": "Hiromu Arakawa", "rating": "5.0", "read": true, "genre": [1, 2, 12], "classification": [1]}}, {"model": "api.book", "pk": 13, "fields": {"title": "Jojo's Bizarre Adventure", "author": "Hirohiko Araki", "rating": "4.9", "read": true, "genre": [1, 2, 5, 6, 9, 12], "classification": [1, 3]}}, {"model": "api.book", "pk": 14, "fields": {"title": "Jujutsu Kaisen", "author": "Gege Akutami", "rating": "4.7", "read": true, "genre": [1, 6, 12], "classification": [1]}}, {"model": "api.book", "pk": 15, "fields": {"title": "Demon Slayer", "author": "Koyoharu Gotoge", "rating": "4.3", "read": true, "genre": [1, 2, 6, 8, 9, 12], "classification": [1]}}]
+[
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 1,
+        "fields": {
+            "app_label": "admin",
+            "model": "logentry"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 2,
+        "fields": {
+            "app_label": "auth",
+            "model": "permission"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 3,
+        "fields": {
+            "app_label": "auth",
+            "model": "group"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 4,
+        "fields": {
+            "app_label": "auth",
+            "model": "user"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 5,
+        "fields": {
+            "app_label": "contenttypes",
+            "model": "contenttype"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 6,
+        "fields": {
+            "app_label": "sessions",
+            "model": "session"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 7,
+        "fields": {
+            "app_label": "api",
+            "model": "book"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 8,
+        "fields": {
+            "app_label": "api",
+            "model": "genre"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 9,
+        "fields": {
+            "app_label": "api",
+            "model": "classification"
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "rtxy5g1rw9xecthsx717d952di8iiv2i",
+        "fields": {
+            "session_data": ".eJxVjDsOwyAQRO9CHSG85psyvc-AYBcHJxFIxq6i3D1YcpFUI715M2_mw75lv7e0-oXYlQ3s8stiwGcqR0GPUO6VYy3bukR-KPxsG58qpdftdP8Ocmi5r4XFUUSHQGoUoBRCUkHj4EYLkoCsEakTI5EQtJYY7dzDzkZZZwjY5wvMozdS:1rBzzz:pNvvQJ9FE0FVL2KYvehMzNcxRx9_6zFymiLQpbeJlPI",
+            "expire_date": "2023-12-23T16:16:15.201Z"
+        }
+    },
+    {
+        "model": "api.genre",
+        "pk": 1,
+        "fields": {
+            "name": "Action"
+        }
+    },
+    {
+        "model": "api.genre",
+        "pk": 2,
+        "fields": {
+            "name": "Aventure"
+        }
+    },
+    {
+        "model": "api.genre",
+        "pk": 3,
+        "fields": {
+            "name": "Historique"
+        }
+    },
+    {
+        "model": "api.genre",
+        "pk": 4,
+        "fields": {
+            "name": "Mystï¿½re"
+        }
+    },
+    {
+        "model": "api.genre",
+        "pk": 5,
+        "fields": {
+            "name": "Policier"
+        }
+    },
+    {
+        "model": "api.genre",
+        "pk": 6,
+        "fields": {
+            "name": "Surnaturel"
+        }
+    },
+    {
+        "model": "api.genre",
+        "pk": 7,
+        "fields": {
+            "name": "SciFi"
+        }
+    },
+    {
+        "model": "api.genre",
+        "pk": 8,
+        "fields": {
+            "name": "Horreur"
+        }
+    },
+    {
+        "model": "api.genre",
+        "pk": 9,
+        "fields": {
+            "name": "Drame"
+        }
+    },
+    {
+        "model": "api.genre",
+        "pk": 10,
+        "fields": {
+            "name": "Post-Apocalyptique"
+        }
+    },
+    {
+        "model": "api.genre",
+        "pk": 11,
+        "fields": {
+            "name": "Dystopie"
+        }
+    },
+    {
+        "model": "api.genre",
+        "pk": 12,
+        "fields": {
+            "name": "Fantastique"
+        }
+    },
+    {
+        "model": "api.genre",
+        "pk": 13,
+        "fields": {
+            "name": "Comï¿½die"
+        }
+    },
+    {
+        "model": "api.genre",
+        "pk": 14,
+        "fields": {
+            "name": "Ecole"
+        }
+    },
+    {
+        "model": "api.genre",
+        "pk": 15,
+        "fields": {
+            "name": "Tranche de vie"
+        }
+    },
+    {
+        "model": "api.genre",
+        "pk": 16,
+        "fields": {
+            "name": "Cyberpunk"
+        }
+    },
+    {
+        "model": "api.classification",
+        "pk": 1,
+        "fields": {
+            "name": "Shonen"
+        }
+    },
+    {
+        "model": "api.classification",
+        "pk": 2,
+        "fields": {
+            "name": "Shojo"
+        }
+    },
+    {
+        "model": "api.classification",
+        "pk": 3,
+        "fields": {
+            "name": "Seinen"
+        }
+    },
+    {
+        "model": "api.classification",
+        "pk": 4,
+        "fields": {
+            "name": "Manhwa"
+        }
+    },
+    {
+        "model": "api.book",
+        "pk": 1,
+        "fields": {
+            "title": "Vinland Saga",
+            "author": "Makoto Yukimura",
+            "rating": "4.8",
+            "read": true,
+            "genre": [
+                1,
+                2,
+                3
+            ],
+            "classification": [
+                1
+            ]
+        }
+    },
+    {
+        "model": "api.book",
+        "pk": 2,
+        "fields": {
+            "title": "Death Note",
+            "author": "Tsugumi Ohba",
+            "rating": "4.3",
+            "read": true,
+            "genre": [
+                4,
+                5,
+                6
+            ],
+            "classification": [
+                3
+            ]
+        }
+    },
+    {
+        "model": "api.book",
+        "pk": 3,
+        "fields": {
+            "title": "Gunmm",
+            "author": "Yukito Kishiro",
+            "rating": "4.8",
+            "read": true,
+            "genre": [
+                1,
+                2,
+                7,
+                11,
+                16
+            ],
+            "classification": [
+                3
+            ]
+        }
+    },
+    {
+        "model": "api.book",
+        "pk": 4,
+        "fields": {
+            "title": "Berserk",
+            "author": "Kentaro Miura",
+            "rating": "5.0",
+            "read": true,
+            "genre": [
+                1,
+                2,
+                6,
+                8
+            ],
+            "classification": [
+                3
+            ]
+        }
+    },
+    {
+        "model": "api.book",
+        "pk": 5,
+        "fields": {
+            "title": "Shingeki no Kyojin",
+            "author": "Hajime Isayama",
+            "rating": "4.7",
+            "read": true,
+            "genre": [
+                1,
+                8,
+                9,
+                10,
+                11
+            ],
+            "classification": [
+                1
+            ]
+        }
+    },
+    {
+        "model": "api.book",
+        "pk": 6,
+        "fields": {
+            "title": "One Piece",
+            "author": "Eiichiro Oda",
+            "rating": "5.0",
+            "read": true,
+            "genre": [
+                1,
+                2,
+                12
+            ],
+            "classification": [
+                1
+            ]
+        }
+    },
+    {
+        "model": "api.book",
+        "pk": 7,
+        "fields": {
+            "title": "Fairy Tail",
+            "author": "Hiro Mashima",
+            "rating": "4.6",
+            "read": true,
+            "genre": [
+                1,
+                2,
+                12
+            ],
+            "classification": [
+                1
+            ]
+        }
+    },
+    {
+        "model": "api.book",
+        "pk": 8,
+        "fields": {
+            "title": "Naruto",
+            "author": "Masashi Kishimoto",
+            "rating": "4.7",
+            "read": true,
+            "genre": [
+                1,
+                2,
+                12
+            ],
+            "classification": [
+                1
+            ]
+        }
+    },
+    {
+        "model": "api.book",
+        "pk": 9,
+        "fields": {
+            "title": "Dragon Ball",
+            "author": "Akira Toriyama",
+            "rating": "4.8",
+            "read": true,
+            "genre": [
+                1,
+                2,
+                12
+            ],
+            "classification": [
+                1
+            ]
+        }
+    },
+    {
+        "model": "api.book",
+        "pk": 10,
+        "fields": {
+            "title": "Great Teacher Onizuka",
+            "author": "Tohru Fujisawa",
+            "rating": "5.0",
+            "read": true,
+            "genre": [
+                13,
+                14,
+                15
+            ],
+            "classification": [
+                1
+            ]
+        }
+    },
+    {
+        "model": "api.book",
+        "pk": 11,
+        "fields": {
+            "title": "Hunter x Hunter",
+            "author": "Yoshihiro Togashi",
+            "rating": "4.9",
+            "read": true,
+            "genre": [
+                1,
+                2,
+                12
+            ],
+            "classification": [
+                1
+            ]
+        }
+    },
+    {
+        "model": "api.book",
+        "pk": 12,
+        "fields": {
+            "title": "Fullmetal Alchemist",
+            "author": "Hiromu Arakawa",
+            "rating": "5.0",
+            "read": true,
+            "genre": [
+                1,
+                2,
+                12
+            ],
+            "classification": [
+                1
+            ]
+        }
+    },
+    {
+        "model": "api.book",
+        "pk": 13,
+        "fields": {
+            "title": "Jojo's Bizarre Adventure",
+            "author": "Hirohiko Araki",
+            "rating": "4.9",
+            "read": true,
+            "genre": [
+                1,
+                2,
+                5,
+                6,
+                9,
+                12
+            ],
+            "classification": [
+                1,
+                3
+            ]
+        }
+    },
+    {
+        "model": "api.book",
+        "pk": 14,
+        "fields": {
+            "title": "Jujutsu Kaisen",
+            "author": "Gege Akutami",
+            "rating": "4.7",
+            "read": true,
+            "genre": [
+                1,
+                6,
+                12
+            ],
+            "classification": [
+                1
+            ]
+        }
+    },
+    {
+        "model": "api.book",
+        "pk": 15,
+        "fields": {
+            "title": "Demon Slayer",
+            "author": "Koyoharu Gotoge",
+            "rating": "4.3",
+            "read": true,
+            "genre": [
+                1,
+                2,
+                6,
+                8,
+                9,
+                12
+            ],
+            "classification": [
+                1
+            ]
+        }
+    }
+]
