@@ -1,0 +1,6 @@
+@use '../Placeholders/nav' as nav;
+
+.custom-nav
+{
+    @extend nav.custom-nav;
+}
