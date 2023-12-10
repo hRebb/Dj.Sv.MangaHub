@@ -1,0 +1,5 @@
+@use '../Placeholders/buttons' as btn;
+
+.custom-btn {
+    @include btn.primary-btn;
+}

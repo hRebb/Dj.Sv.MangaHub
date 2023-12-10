@@ -1,0 +1,56 @@
+@mixin button-style($bg-color, $color)
+{
+    background-color: $bg-color;
+    color: $color;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: darken($bg-color, 10%);
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+%buttons
+{
+    &.primary
+    {
+      @include button-style(#3498db, #23c923 );
+    }
+  
+    &.secondary
+    {
+      @include button-style(#e74c3c, #2e89a0e3);
+    }
+  
+    &.success
+    {
+      @include button-style(#2ecc71, #bb8520);
+    }
+  
+    &.warning
+    {
+      @include button-style(#f39c12, #289707);
+    }
+  
+    &.info
+    {
+      @include button-style(#3498db, rgb(51, 4, 70));
+    }
+  
+    &.default
+    {
+      @include button-style(#ccc, #fff);
+    }
+}
+
+.primary-btn
+{
+    @extend %buttons;
+    @extend .primary;
+}
