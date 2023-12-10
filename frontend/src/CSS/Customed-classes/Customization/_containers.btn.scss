@@ -1,5 +1,6 @@
-@use '../Placeholders/buttons' as btn;
+@use '../Placeholders/buttons';
 
-.custom-btn {
-    @include btn.primary-btn;
+.btn-customized
+{
+    @extend .primary-btn;
 }

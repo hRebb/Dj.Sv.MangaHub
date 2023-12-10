@@ -1,5 +1,6 @@
-@use '../Placeholders/footer' as foot;
+@use '../Placeholders/footer';
 
-.custom-footer {
-    @extend foot.custom-footer;
+.footer-customized 
+{
+    @extend .custom-footer;
 }

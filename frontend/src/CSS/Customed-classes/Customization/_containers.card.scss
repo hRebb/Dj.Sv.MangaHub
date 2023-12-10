@@ -1,5 +1,6 @@
-@use '../Placeholders/card' as card;
+@use '../Placeholders/card';
 
-.custom-card {
-    @extend card.custom-card;
+.card-customized 
+{
+    @extend .custom-card;
 }

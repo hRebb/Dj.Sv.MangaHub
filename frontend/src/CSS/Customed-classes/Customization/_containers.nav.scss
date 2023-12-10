@@ -1,6 +1,6 @@
-@use '../Placeholders/nav' as nav;
+@use '../Placeholders/nav';
 
-.custom-nav
+.nav-customized
 {
-    @extend nav.custom-nav;
+    @extend .custom-nav;
 }

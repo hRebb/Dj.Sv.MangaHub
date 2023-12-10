@@ -1,5 +1,6 @@
-@use '../Placeholders/header' as head;
+@use '../Placeholders/header';
 
-.custom-header {
-    @extend head.custom-header;
+.header-customized 
+{
+    @extend .custom-header;
 }

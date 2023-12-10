@@ -1,5 +1,6 @@
-@use '../Placeholders/assets' as main-class;
+@use '../Placeholders/assets';
 
-.custom-main {
-    @extend main-class.custom-main;
+.main-customized
+{
+    @extend .custom-main;
 }
