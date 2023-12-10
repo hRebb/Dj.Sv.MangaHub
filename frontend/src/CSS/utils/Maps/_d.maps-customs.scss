@@ -1,0 +1,65 @@
+$button-styles: (
+      "primary": (
+        "color": #fff,
+        "background-color": #00bfff,
+        "border-color": #00bfff
+      ),
+
+      "secondary": (
+          "color": #fff,
+          "background-color": #00ff7f,
+          "border-color": #00ff7f
+      ),
+
+      "tertiary": (
+          "color": #fff,
+          "background-color": #ffa500,
+          "border-color": #ffa500
+      )
+);
+
+$shape-styles: (
+      "square": (
+          "border-radius": 0,
+          "border-color": #000
+      ),
+
+      "round": (
+          "border-radius": 50%,
+          "border-color": #000
+      ),
+
+      "pill": (
+          "border-radius": 100px,
+          "border-color": #000
+      )
+);
+
+$animation-styles: (
+      "fade": (
+          "opacity": 0,
+          "transition": "opacity 0.5s ease-in-out"
+      ),
+
+      "slide-up": (
+          "transform": 'translateY(-100%)',
+          "transition": "transform 0.5s ease-in-out"
+      ),
+
+      "slide-down": (
+          "transform": "translateY(-100%)",
+          "transition": "transform 0.5s ease-in-out"
+      ),
+
+      "slide-left": (
+          "transform": "translateX(-100%)",
+          "transition": "transform 0.5s ease-in-out"
+      ),
+
+     "slide-right": (
+          "transform": "translateX(100%)",
+          "transition": "transform 0.5s ease-in-out"
+     )
+);
+
+// Path: frontend/src/CSS/utils/Maps/_d-maps-customs.scss

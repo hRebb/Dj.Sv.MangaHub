@@ -1,0 +1,40 @@
+$transition-sizes: (
+        "button": (
+                "desktop": 0.5s,
+                "tablet": 0.25s,
+                "mobile": 0.1s
+        ),
+        "input": (
+                "desktop": 0.2s,
+                "tablet": 0.1s,
+                "mobile": 0.05s
+        ),
+        "textarea": (
+                "desktop": 0.3s,
+                "tablet": 0.15s,
+                "mobile": 0.1s
+        )
+);
+
+
+$transition-properties : (
+        "button": (
+            "background-color",
+            "color",
+            "border-color"
+        ),
+
+        "input": (
+            "background-color",
+            "border-color",
+            "box-shadow"
+        ),
+
+        "textarea": (
+            "background-color",
+            "border-color",
+            "box-shadow"
+        )
+);
+
+// Path: frontend/src/CSS/utils/Maps/_d.maps-transition.scss

@@ -1,0 +1,75 @@
+$font-sizing: (
+    "h1": (
+          "desktop": 36px,
+          "tablet": 32px,
+          "mobile": 24px
+    ),
+    "h2": (
+          "desktop": 30px,
+          "tablet": 28px,
+          "mobile": 22px
+    ),
+    "h3": (
+          "desktop": 24px,
+          "tablet": 22px,
+          "mobile": 18px
+    )
+);
+
+
+$margin-sizing: (
+      "header": (
+          "desktop": 20px,
+          "tablet": 15px,
+          "mobile": 10px
+      ),
+      "footer": (
+          "desktop": 30px,
+          "tablet": 25px,
+          "mobile": 20px
+      ),
+      "section": (
+          "desktop": 10px,
+          "tablet": 5px,
+          "mobile": 0
+      )
+);
+
+$padding-sizing: (
+        "button": (
+                "desktop": 10px,
+                "tablet": 8px,
+                "mobile": 6px
+        ),
+        "input": (
+                "desktop": 15px,
+                "tablet": 12px,
+                "mobile": 10px
+        ),
+        "textarea": (
+                "desktop": 20px,
+                "tablet": 18px,
+                "mobile": 15px
+        )
+);
+
+
+$border-sizes: (
+        "button": (
+                "desktop": 1px,
+                "tablet": 0.5px,
+                "mobile": 0.25px
+        ),
+        "input": (
+                "desktop": 2px,
+                "tablet": 1px,
+                "mobile": 0.5px
+        ),
+        "textarea": (
+                "desktop": 3px,
+                "tablet": 2px,
+                "mobile": 1px
+        )
+);
+
+// Path: frontend/src/CSS/utils/Maps/_d.maps-sample.scss

@@ -1,0 +1,18 @@
+$breakpoints: (
+        "small": (
+            "max-width": 480px
+        ),
+        "medium": (
+            "min-width": 481px,
+            "max-width": 768px
+        ),
+        "large": (
+            "min-width": 769px,
+            "max-width": 1024px
+        ),
+        "x-large": (
+            "min-width": 1025px
+        )
+);
+
+// Path: frontend/src/CSS/utils/Maps/_d.maps-breakpoints.scss
