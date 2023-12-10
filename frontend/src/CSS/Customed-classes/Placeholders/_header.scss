@@ -1,0 +1,23 @@
+@mixin header-style($bg-color, $text-color, $padding, $border-bottom)
+{
+    background-color: $bg-color;
+    color: $text-color;
+    padding: $padding;
+    border-bottom: $border-bottom;
+}
+
+%header
+{
+    @include header-style(#000, #fff, 20px, 1px solid #ddd);
+}
+
+.custom-header
+{
+    @extend %header;
+}
+
+.light-header
+{
+    @extend %header;
+    @include header-style(#f8f9, #333, 20px, 1px solid #ddd);
+}
