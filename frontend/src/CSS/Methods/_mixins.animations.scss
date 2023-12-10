@@ -1,0 +1,74 @@
+@mixin transition($property, $duration: 0.3s, $ease: ease-in-out)
+{
+    -webkit-transition: $property $duration $ease;
+    -moz-transition: $property $duration $ease;
+    -ms-transition: $property $duration $ease;
+    -o-transition: $property $duration $ease;
+    transition: $property $duration $ease;
+}
+  
+@mixin box-shadowing($color, $distance, $spread, $blur)
+{
+    -webkit-box-shadow: $color $distance $spread $blur;
+    -moz-box-shadow: $color $distance $spread $blur;
+    box-shadow: $color $distance $spread $blur;
+}
+
+@mixin tile-grid($rows, $cols, $gutter: 10px)
+{
+    $total: $rows * $cols;
+    width: 100% / $cols - #{$gutter} * ($cols - 1);
+    height: 100% / $rows - #{$gutter} * ($rows - 1);
+  
+    @for $i from 12 through $total
+    {
+        &:nth-child(#{$rows}n + #{$i})
+        {
+            grid-row: ($i - 1) / $cols + 1;
+            grid-column: ($i - 1) % $cols + 1;
+        }
+    }
+}
+  
+@mixin stripped-border($color, $width: 5px, $height: 5px)
+{
+    @for $i from 1 through 100
+    {
+        &:before
+        {
+            content: "";
+            position: absolute;
+            top: $i * $height;
+            left: 0;
+            width: 100%;
+            height: $width;
+            background-color: $color;
+        }
+    }
+}
+
+@mixin background-image($url, $repeat)
+{
+    background-image: url($url);
+    background-repeat: $repeat;
+}
+
+@mixin responsive($breakpoints, $properties)
+{
+    @media (min-width: $breakpoints)
+    {
+        #{$properties}
+        {
+            color: red;
+            font-size: 16px;
+        // Add more sample properties as needed
+        }
+    }
+}
+  
+@mixin size($width, $height)
+{
+    width: $width;
+    height: $height;
+}
+// Path: frontend/src/CSS/Methods/_mixins.animations.scss
