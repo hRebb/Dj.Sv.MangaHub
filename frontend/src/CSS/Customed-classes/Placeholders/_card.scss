@@ -1,0 +1,41 @@
+@mixin card-style($bg-color, $border-color, $padding, $border-radius)
+{
+    background-color: $bg-color;
+    border: 1px solid $border-color;
+    padding: $padding;
+    border-radius: $border-radius;
+
+    &.card-header
+    {
+        padding: 10px;
+        background-color: lighten($bg-color, 10%);
+        border-bottom: 1px solid darken($border-color, 10%);
+    }
+
+    &.card-body
+    {
+        padding: 15px;
+    }
+
+    &.card-footer
+    {
+        padding: 10px;
+        background-color: lighten($bg-color, 10%);
+        border-top: 1px solid darken($border-color, 10%);
+    }
+}
+
+%card
+{
+    @include card-style(#fff, #ddd, 15px, 5px);
+}
+
+.custom-card 
+{
+    @extend %card;
+}
+
+.special-card {
+    @extend %card;
+    @include card-style(#ecf0f1, #bdc3c7, 20px, 8px);
+}
