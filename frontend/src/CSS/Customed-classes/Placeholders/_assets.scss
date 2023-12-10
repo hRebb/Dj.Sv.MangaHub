@@ -1,0 +1,54 @@
+@mixin get-color($color)
+{
+    color: $color;
+}
+
+@mixin dynamic-color($color, $type: base)
+{
+    @if $type == base or $type == primary or $type == secondary
+    {
+        color: $color;
+    }
+    @else
+    {
+        @error "Invalid color type: #{$type}. Use 'base', 'primary', or 'secondary'.";
+    }
+}
+
+@mixin darken-color($color, $amount)
+{
+    background-color: darken($color, $amount);
+}
+
+%MainClass {
+    padding: 2rem 0;
+
+    .section {
+        margin-bottom: 2rem;
+
+        h2 {
+            @include dynamic-color(#3498db, primary);
+        }
+
+        p {
+            line-height: 1.6;
+        }
+    }
+
+    .button {
+        display: inline-block;
+        padding: 0.75rem 1.5rem;
+        @include dynamic-color(#2ecc71, secondary);
+        @include get-color(#fff);
+        text-decoration: none;
+        border-radius: 4px;
+
+        &:hover {
+            @include darken-color(#2ecc71, 10%);
+        }
+    }
+}
+
+.custom-main {
+    @extend %MainClass;
+}

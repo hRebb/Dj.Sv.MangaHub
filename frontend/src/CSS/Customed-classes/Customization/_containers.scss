@@ -1,0 +1,5 @@
+@use '../Placeholders/assets' as main-class;
+
+.custom-main {
+    @extend main-class.custom-main;
+}
