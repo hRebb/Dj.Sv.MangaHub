@@ -4,12 +4,12 @@ from .models import Book, Genre, Classification
 class GenreSerializer(serializers.ModelSerializer):
     class Meta:
         model = Genre
-        fields = ['id', 'name']
+        fields = ['name']
 
 class ClassificationSerializer(serializers.ModelSerializer):
     class Meta:
         model = Classification
-        fields = ['id', 'name']
+        fields = ['name']
 
 class BookSerializer(serializers.ModelSerializer):
     genre = GenreSerializer(many=True, read_only=True, source='genre.all')
