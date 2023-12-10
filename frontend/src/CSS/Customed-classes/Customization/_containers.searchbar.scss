@@ -1,0 +1,5 @@
+@use '../Placeholders/searchbar' as search;
+
+.custom-searchbar {
+    @extend search.custom-searchbar;
+}

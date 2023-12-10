@@ -1,0 +1,58 @@
+@mixin search-bar-style($bg-color, $text-color, $padding, $border, $border-radius)
+{
+    background-color: $bg-color;
+    color: $text-color;
+    padding: $padding;
+    border: $border;
+    border-radius: $border-radius;
+
+    & input[type="text"] 
+    {
+        width: 200px;
+        padding: 8px;
+        margin: 0;
+        border: none;
+        border-radius: $border-radius;
+        box-sizing: border-box;
+        background-color: lighten($color: $bg-color, $amount: 5%);
+        color: $text-color;
+
+        &:focus
+        {
+            outline: none;
+            border: 1px solid darken($color: $bg-color, $amount: 10%);
+        }
+    }
+
+    & button
+    {
+        padding: 8px;
+        margin-left: 5px;
+        border: none;
+        border-radius: $border-radius;
+        background-color: lighten($color: $bg-color, $amount: 5%);
+        color: #fff;
+        cursor: pointer;
+
+        &:focus
+        {
+            border: 1px solid darken($color: $bg-color, $amount: 10%);
+        }
+    }
+}
+
+%search
+{
+    @include search-bar-style(#fff, #333, 8px, 1px solid #ddd, 4px);
+}
+
+.custom-search
+{
+    @extend %search;
+}
+
+.light-search
+{
+    @extend %search;
+    @include search-bar-style(#f8f9, #555, 8px, 1px solid #ddd, 4px);
+}
