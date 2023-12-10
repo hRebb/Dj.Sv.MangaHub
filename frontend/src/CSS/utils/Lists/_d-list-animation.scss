@@ -1,0 +1,33 @@
+$animation-transition-names: (
+    "fade",
+    "slide",
+    "grow",
+    "shrink"
+);
+
+$animation-gradient-property : (
+    "background-image",
+    "background",
+    "border-image"
+);
+
+$animation-transition: (
+    "fade",
+    "slide",
+    "pop",
+    "flip"
+);
+
+$animation-border-shapes: (
+    "solid",
+    "dotted",
+    "dashed",
+    "double"
+);
+
+$animation-fill-shape: (
+    "solid",
+    "gradient",
+    "image"
+);
+// Path: frontend/src/CSS/utils/Lists/_d-list-animation.scss

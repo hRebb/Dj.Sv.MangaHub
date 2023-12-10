@@ -1,0 +1,20 @@
+$border-size: (
+    "thin": 1px,
+    "medium": 2px,
+    "thick": 4px
+);
+
+$border-widths: (
+    "thin": 1px,
+    "medium": 2px,
+    "thick": 4px
+);
+
+$border-shapes: (
+    "solid",
+    "dotted",
+    "dashed",
+    "double"
+);
+
+// Path: frontend/src/CSS/utils/Lists/_d.list-border.scss

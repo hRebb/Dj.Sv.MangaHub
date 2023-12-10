@@ -1,0 +1,49 @@
+$primary-colors: (
+    "primary": "#007bff",
+    "secondary": "#6c757d",
+    "tertiary": "#28a745",
+);
+
+$custom-colors: (
+    "accent": "#ff9800",
+    "highlight": "#4caf50",
+    "error": "#f44336",
+    "warning": "#ffeb3b",
+);
+
+$pastel-colors: (
+    "light-pink": "#ffc0cb",
+    "light-blue": "#add8e6",
+    "light-green": "#90ee90",
+    "light-lavender": "#e6e6fa",
+);
+
+$earth-tone-colors: (
+    "sienna": "#a0522d",
+    "olive": "#808000",
+    "brown": "#8b4513",
+    "tan": "#d2b48c",
+);
+
+$monochrome-shades: (
+    "black": "#000000",
+    "gray-darker": "#333333",
+    "gray-dark": "#555555",
+    "gray-light": "#cccccc",
+);
+
+$neon-colors: (
+    "neon-pink": "#ff1493",
+    "neon-green": "#00ff00",
+    "neon-orange": "#ff4500",
+    "neon-yellow": "#ffff00",
+);
+
+$sunset-colors: (
+    "sunset-red": "#ff5a5f",
+    "sunset-orange": "#ff7e5f",
+    "sunset-yellow": "#ffc96b",
+    "sunset-purple": "#6a0572",
+);
+
+// Path: frontend/src/CSS/utils/Lists/_d.list-colors.scss

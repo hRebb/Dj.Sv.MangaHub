@@ -1,0 +1,35 @@
+$margin-size: (
+    "tiny": 5px,
+    "small": 10px,
+    "medium": 20px,
+    "large": 30px
+);
+
+$margin-all: (
+    "top": (
+        "tiny": 5px,
+        "small": 10px,
+        "medium": 20px,
+        "large": 30px
+    ),
+    "bottom": (
+        "tiny": 5px,
+        "small": 10px,
+        "medium": 20px,
+        "large": 30px
+    ),
+    "left": (
+        "tiny": 5px,
+        "small": 10px,
+        "medium": 20px,
+        "large": 30px
+    ),
+    "right": (
+        "tiny": 5px,
+        "small": 10px,
+        "medium": 20px,
+        "large": 30px
+    )
+);
+
+// Path: frontend/src/CSS/utils/Lists/_d.list-margin.scss
