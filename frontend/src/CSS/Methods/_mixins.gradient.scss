@@ -1,0 +1,30 @@
+@mixin gradient($begin-color, $end-color, $direction)
+{
+    background: $begin-color;
+    background: -webkit-linear-gradient($direction, $begin-color, $end-color);
+    background: -o-linear-gradient($direction, $begin-color, $end-color);
+    background: -moz-linear-gradient($direction, $begin-color, $end-color);
+    background: linear-gradient($direction, $begin-color, $end-color);
+}
+
+@mixin gradient-vertical($begin-color, $end-color)
+{
+    @include gradient($begin-color, $end-color, top);
+}
+
+@mixin gradient-horizontal($begin-color, $end-color)
+{
+    @include gradient($begin-color, $end-color, left);
+}
+
+@mixin gradient-radial($begin-color, $end-color)
+{
+    @include gradient($begin-color, $end-color, circle);
+}
+
+@mixin gradient-diagonal($begin-color, $end-color)
+{
+    @include gradient($begin-color, $end-color, 45deg);
+}
+
+// Path: frontend/src/CSS/Methods/_mixins.gradient.scss

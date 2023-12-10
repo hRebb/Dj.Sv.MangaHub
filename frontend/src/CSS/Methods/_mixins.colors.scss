@@ -1,0 +1,25 @@
+@mixin color-transition($duration: .5s, $colors...)
+{
+    $color-count: length($colors);
+    $color-duration: $duration / $color-count;
+  
+    @for $i from 1 through $color-count
+    {
+        &:nth-child(#{$color-count}n + #{$i})
+        {
+            transition: background-color $duration;
+            background-color: nth($colors, $i);
+  
+            @if $i > 1
+            {
+                &:hover
+                {
+                    background-color: nth($colors, $i - 1);
+                    transition-delay: -$color-duration;
+                }
+            }
+        }
+    }
+}
+
+// Path: frontend/src/CSS/Methods/_mixins.colors.scss
