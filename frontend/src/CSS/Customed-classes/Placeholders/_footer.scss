@@ -1,0 +1,23 @@
+@mixin footer-style($bg-color, $text-color, $padding, $border-top)
+{
+    background-color: $bg-color;
+    color: $text-color;
+    padding: $padding;
+    border-top: $border-top;
+}
+
+%footer
+{
+    @include footer-style(#000, #f71c1c, 20px, 1px solid #ddd);
+}
+
+.custom-footer
+{
+    @extend %footer;
+}
+
+.light-footer
+{
+    @extend %footer;
+    @include footer-style(#f8f9, #333, 20px, 1px solid #ddd);
+}
