@@ -63,6 +63,11 @@
         list-style-type: none;
     }
 
+    .card-img-15
+    {
+        padding-bottom: 25px;
+    }
+
     $images: 
         'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Vinland_Saga_simplified_logo.svg/langfr-220px-Vinland_Saga_simplified_logo.svg.png', 
         'https://upload.wikimedia.org/wikipedia/fr/b/b2/Death_Note_Logo.svg', 
@@ -75,9 +80,12 @@
         'https://upload.wikimedia.org/wikipedia/fr/f/f5/Dragon_ball_logo.png',
         'https://upload.wikimedia.org/wikipedia/fr/d/d9/Logo_GTO.png',
         'https://upload.wikimedia.org/wikipedia/fr/thumb/4/45/Logo_Hunter_x_Hunter.svg/langfr-1280px-Logo_Hunter_x_Hunter.svg.png',
-        'https://upload.wikimedia.org/wikipedia/fr/1/11/Fullmetal_Alchemist_logo.png';
+        'https://upload.wikimedia.org/wikipedia/fr/1/11/Fullmetal_Alchemist_logo.png',
+        'https://upload.wikimedia.org/wikipedia/commons/6/6e/JoJo%27s_Bizarre_Adventure_logo.png',
+        'https://upload.wikimedia.org/wikipedia/fr/4/4d/Jujutsu_kaisen_logo_fr.png',
+        'https://upload.wikimedia.org/wikipedia/fr/2/23/Demon_Slayer_Logo_international.png';
 
-    $widths: 
+    $heights: 
         190px, 
         100px, 
         70px,
@@ -89,10 +97,13 @@
         110px,
         145px,
         130px,
-        130px;
+        130px,
+        130px,
+        75px,
+        135px;
 
 
-    $heights: 
+    $widths: 
         230px, 
         245px, 
         230px,
@@ -104,13 +115,16 @@
         230px,
         225px,
         225px,
-        220px;
+        220px,
+        225px,
+        198px,
+        200px;
 
     @for $i from 1 through length($images)
     {
         .card-img-#{$i}
         {
-            @include implementImage(nth($images, $i), nth($widths, $i), nth($heights, $i));
+            @include implementImage(nth($images, $i), nth($heights, $i), nth($widths, $i));
         }
     }
 
