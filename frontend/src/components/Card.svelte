@@ -10,33 +10,33 @@
     }
 </script>
 
-<ul class="card-customized custom">
-        <li class="card-img card-img-{book.id}"></li>
-        <li>{book.title}</li>
-        <li>{book.author}</li>
-        <li>{book.rating}</li>
-        {#if book.read}
-            <li>Has been read</li>
-        {:else}
-            <li>Not Yet</li>
-        {/if}
-        <li>
-            Genres: 
-            {#each book.genre as genre} 
-                <ol>
-                    {genre.name}
-                </ol> 
-            {/each}
-        </li>
-        <li>
-            Classification: 
-            {#each book.classification as classification} 
-                <ol>
-                    {classification.name}
-                </ol> 
-            {/each}
-        </li>
-        <br>
+<ul class="card-customized card-implement card-grid-container">
+    <li class="card-img card-img-{book.id}"></li>
+    <li>{book.title}</li>
+    <li>{book.author}</li>
+    <li>{book.rating}</li>
+    {#if book.read}
+        <li>Has been read</li>
+    {:else}
+        <li>Not Yet</li>
+    {/if}
+    <li>
+        Genres: 
+        {#each book.genre as genre} 
+            <ol>
+                {genre.name}
+            </ol> 
+        {/each}
+    </li>
+    <li>
+        Classification: 
+        {#each book.classification as classification} 
+            <ol>
+                {classification.name}
+            </ol> 
+        {/each}
+    </li>
+    <br>
 </ul>
 
 <style lang="scss">
@@ -51,7 +51,14 @@
         background-size: contain;
     };
 
-    .custom
+    .card-grid-container
+    {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 20px;
+    }
+
+    .card-implement
     {
         list-style-type: square;
         width: 245px;
