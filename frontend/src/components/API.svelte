@@ -1,5 +1,6 @@
 <script lang="ts">
     import { onMount } from 'svelte';
+    import Card from './Card.svelte';
 
     type Book = {
         id: number,
@@ -27,30 +28,8 @@
     });
 </script>
 
-<ul>
+<div>
     {#each books as book}
-        <li>{book.title}</li>
-        <li>{book.author}</li>
-        <li>{book.rating}</li>
-        {#if book.read}
-            <li>Has been read</li>
-        {:else}
-            <li>Not Yet</li>
-        {/if}
-        <li>
-            Genres: 
-            {#each book.genre as genre} 
-                <ol>
-                    {genre.name}
-                </ol> 
-            {/each}
-        </li>
-        <li>
-            Classification: 
-            {#each book.classification as classification} 
-                {classification.name} 
-            {/each}
-        </li>
-        <br>
+        <Card book={book} />
     {/each}
-</ul>
+</div>
