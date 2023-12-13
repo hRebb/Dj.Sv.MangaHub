@@ -48,15 +48,27 @@
     @mixin implementTitle($title)
     {
        $titleMap: (
-            'Aref': 'Aref Ruqaa Ink, Roboto, sans-serif',
-            'Antiqua': 'Glass Antiqua, cursive',
-            'VT': 'VT323, monospace',
-            'Nova': 'Nova Mono, monospace',
-        );
+            'Aref': (
+                'font-family': 'Aref Ruqaa Ink, Roboto, sans-serif',
+            ),
+            'Antiqua': (
+                'font-family': 'Glass Antiqua, cursive',
+            ),
+            'VT': (
+                'font-family': 'VT323, monospace',
+            ),
+            'Nova': (
+                'font-family': 'Nova Mono, monospace',
+            ),
+       );
 
         @if map-has-key($map: $titleMap, $key: $title)
         {
-            font-family: map-get($map: $titleMap, $key: $title);
+            $styles: map-get($map: $titleMap, $key: $title);
+            @each $key, $value in $styles
+            {
+                #{$key}: #{$value};
+            }
         }
 
         font-size: 20px;
