@@ -42,18 +42,9 @@
 
 <style lang="scss">
     @use '../CSS/Customed-classes/Customization/containers.card';
+    @use '../CSS/svelte-components/cards';
     @use '../fonts/fonts.scss';
     
-    
-    @mixin implementImage($url, $height, $width)
-    {
-        background-image: url($url);
-        height: $height;
-        width: $width;
-        background-repeat: no-repeat;
-        background-size: contain;
-    };
-
     @mixin implementTitle($title)
     {
         @if ($title == 'Aref')
@@ -64,6 +55,11 @@
         @if ($title == 'Antiqua')
         {
             font-family: 'Glass Antiqua', cursive;
+        }
+
+        @if ($title == 'VT')
+        {
+            font-family: 'VT323', monospace;
         }
 
         font-size: 20px;
@@ -126,66 +122,13 @@
     {
         display: inline;
         padding-left: 10px;
+
+        @include implementTitle('VT');
     }
 
-    $images: 
-        'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Vinland_Saga_simplified_logo.svg/langfr-220px-Vinland_Saga_simplified_logo.svg.png', 
-        'https://upload.wikimedia.org/wikipedia/fr/b/b2/Death_Note_Logo.svg', 
-        'https://upload.wikimedia.org/wikipedia/fr/8/81/Gunnm.png',
-        'https://upload.wikimedia.org/wikipedia/commons/f/f1/Berserk_anime_logo.png',
-        'https://upload.wikimedia.org/wikipedia/fr/thumb/9/94/Attaque_des_Titans_CMJN.svg/langfr-1920px-Attaque_des_Titans_CMJN.svg.png',
-        'https://upload.wikimedia.org/wikipedia/fr/thumb/1/1a/Logo_One_piece.svg/langfr-1920px-Logo_One_piece.svg.png',
-        'https://upload.wikimedia.org/wikipedia/fr/thumb/c/c8/Logo_FairyTail.svg/langfr-1920px-Logo_FairyTail.svg.png',
-        'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Naruto_logo.svg/langfr-1920px-Naruto_logo.svg.png',
-        'https://upload.wikimedia.org/wikipedia/fr/f/f5/Dragon_ball_logo.png',
-        'https://upload.wikimedia.org/wikipedia/fr/d/d9/Logo_GTO.png',
-        'https://upload.wikimedia.org/wikipedia/fr/thumb/4/45/Logo_Hunter_x_Hunter.svg/langfr-1280px-Logo_Hunter_x_Hunter.svg.png',
-        'https://upload.wikimedia.org/wikipedia/fr/1/11/Fullmetal_Alchemist_logo.png',
-        'https://upload.wikimedia.org/wikipedia/commons/6/6e/JoJo%27s_Bizarre_Adventure_logo.png',
-        'https://upload.wikimedia.org/wikipedia/fr/4/4d/Jujutsu_kaisen_logo_fr.png',
-        'https://upload.wikimedia.org/wikipedia/fr/2/23/Demon_Slayer_Logo_international.png';
-
-    $heights: 
-        190px, 
-        100px, 
-        70px,
-        110px,
-        125px,
-        130px,
-        105px,
-        109px,
-        110px,
-        145px,
-        130px,
-        130px,
-        130px,
-        75px,
-        135px;
-
-
-    $widths: 
-        230px, 
-        245px, 
-        230px,
-        235px,
-        240px,
-        230px,
-        225px,
-        230px,
-        230px,
-        225px,
-        225px,
-        220px,
-        225px,
-        198px,
-        200px;
-
-    @for $i from 1 through length($images)
+    .card-classification
     {
-        .card-img-#{$i}
-        {
-            @include implementImage(nth($images, $i), nth($heights, $i), nth($widths, $i));
-        }
+        display: block;
+        padding-left: 10px;
     }
-
 </style>
