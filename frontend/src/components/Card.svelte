@@ -20,8 +20,9 @@
     {:else}
         <li class="card-read">Not Yet</li>
     {/if}
-    <li>
-        Genres: 
+    <li class="card-genres-list">
+        Genres:
+        <br> 
         {#each book.genre as genre} 
             <ol class="card-genre">
                 {genre.name}
@@ -51,6 +52,24 @@
         width: $width;
         background-repeat: no-repeat;
         background-size: contain;
+    };
+
+    @mixin implementTitle($title)
+    {
+        @if ($title == 'Aref')
+        {
+            font-family: 'Aref Ruqaa Ink', 'Roboto', sans-serif;
+        }
+
+        @if ($title == 'Antiqua')
+        {
+            font-family: 'Glass Antiqua', cursive;
+        }
+
+        font-size: 20px;
+        font-weight: bold;
+        color: #000000;
+        padding-bottom: 10px;
     };
 
     .card-grid-container
@@ -88,7 +107,25 @@
 
     .card-title
     {
-        font-family: 'Aref Ruqaa Ink', 'Roboto', sans-serif;
+        @include implementTitle('Aref');
+    }
+
+    .card-auth, .card-read
+    {
+        font-family: 'Glass Antiqua', cursive;
+        font-size: 21px;
+    }
+
+    .card-genres-list
+    {
+        list-style-type: none;
+        text-align: center;
+    }
+
+    .card-genre
+    {
+        display: inline;
+        padding-left: 10px;
     }
 
     $images: 
