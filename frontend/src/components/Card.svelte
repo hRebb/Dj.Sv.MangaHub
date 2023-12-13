@@ -62,6 +62,11 @@
             font-family: 'VT323', monospace;
         }
 
+        @if ($title == 'Nova')
+        {
+            font-family: 'Nova Mono', monospace;
+        }
+
         font-size: 20px;
         font-weight: bold;
         color: #000000;
@@ -129,6 +134,9 @@
     .card-classification
     {
         display: block;
-        padding-left: 10px;
+        padding-left: 0px;
+        padding-bottom: 0px;
+
+        @include implementTitle('Nova');
     }
 </style>
