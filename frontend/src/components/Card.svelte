@@ -47,24 +47,16 @@
     
     @mixin implementTitle($title)
     {
-        @if ($title == 'Aref')
-        {
-            font-family: 'Aref Ruqaa Ink', 'Roboto', sans-serif;
-        }
+       $titleMap: (
+            'Aref': 'Aref Ruqaa Ink, Roboto, sans-serif',
+            'Antiqua': 'Glass Antiqua, cursive',
+            'VT': 'VT323, monospace',
+            'Nova': 'Nova Mono, monospace',
+        );
 
-        @if ($title == 'Antiqua')
+        @if map-has-key($map: $titleMap, $key: $title)
         {
-            font-family: 'Glass Antiqua', cursive;
-        }
-
-        @if ($title == 'VT')
-        {
-            font-family: 'VT323', monospace;
-        }
-
-        @if ($title == 'Nova')
-        {
-            font-family: 'Nova Mono', monospace;
+            font-family: map-get($map: $titleMap, $key: $title);
         }
 
         font-size: 20px;
