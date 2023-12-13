@@ -60,9 +60,13 @@
 
     .card-implement
     {
-        list-style-type: square;
+        list-style-type: none;
+        text-align: center;
         width: 245px;
         padding-left: 30px;
+        background-color: #f9f9f9;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
     }
 
     .card-img
@@ -73,6 +77,11 @@
     .card-img-15
     {
         padding-bottom: 25px;
+    }
+
+    ol
+    {
+        display: flex;
     }
 
     $images: 

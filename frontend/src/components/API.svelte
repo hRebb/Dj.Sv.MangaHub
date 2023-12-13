@@ -28,8 +28,16 @@
     });
 </script>
 
-<div>
+<div class="card-grid">
     {#each books as book}
         <Card book={book} />
     {/each}
 </div>
+
+<style lang="scss">
+    .card-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+    }
+</style>
