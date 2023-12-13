@@ -12,18 +12,18 @@
 
 <ul class="card-customized card-implement card-grid-container">
     <li class="card-img card-img-{book.id}"></li>
-    <li>{book.title}</li>
-    <li>{book.author}</li>
-    <li>{book.rating}</li>
+    <li class="card-title">{book.title}</li>
+    <li class="card-auth">{book.author}</li>
+    <li class="card-rate">{book.rating}</li>
     {#if book.read}
-        <li>Has been read</li>
+        <li class="card-read">Has been read</li>
     {:else}
-        <li>Not Yet</li>
+        <li class="card-read">Not Yet</li>
     {/if}
     <li>
         Genres: 
         {#each book.genre as genre} 
-            <ol>
+            <ol class="card-genre">
                 {genre.name}
             </ol> 
         {/each}
@@ -31,7 +31,7 @@
     <li>
         Classification: 
         {#each book.classification as classification} 
-            <ol>
+            <ol class="card-classification">
                 {classification.name}
             </ol> 
         {/each}
@@ -41,7 +41,9 @@
 
 <style lang="scss">
     @use '../CSS/Customed-classes/Customization/containers.card';
-
+    @use '../fonts/fonts.scss';
+    
+    
     @mixin implementImage($url, $height, $width)
     {
         background-image: url($url);
@@ -82,6 +84,11 @@
     ol
     {
         display: flex;
+    }
+
+    .card-title
+    {
+        font-family: 'Aref Ruqaa Ink', 'Roboto', sans-serif;
     }
 
     $images: 
