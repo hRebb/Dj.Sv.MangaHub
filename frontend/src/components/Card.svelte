@@ -24,7 +24,7 @@
         Genres:
         <br> 
         {#each book.genre as genre} 
-            <ol class="card-genre">
+            <ol class="card-genre card-genre-{genre.name.toLowerCase().replace(/\s+/g, '-')}">
                 {genre.name}
             </ol> 
         {/each}
@@ -77,6 +77,13 @@
         padding-bottom: 10px;
     };
 
+    @mixin card-genre-style($bg-color, $hover-color)
+    {
+        box-shadow: inset 0px -7px 7px 0px darken($bg-color, 20%);
+        background: linear-gradient(to bottom, $bg-color 5%, $hover-color 100%);
+        background-color: $bg-color;
+    }
+
     .card-grid-container
     {
         display: grid;
@@ -92,7 +99,7 @@
         padding-left: 30px;
         background-color: #f9f9f9;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        border-radius: 8px;
+        border-radius: 69px 10px 160px 25px;
     }
 
     .card-img
@@ -108,6 +115,7 @@
     ol
     {
         display: flex;
+        margin: 10px 10px 10px 10px;
     }
 
     .card-title
@@ -127,12 +135,45 @@
         text-align: center;
     }
 
+    $genre-colors: (
+        "action": red,
+        "aventure": rgb(79, 139, 79),
+        "historique": crimson,
+        "mystère": rgb(92, 21, 92),
+        "policier": blue,
+        "surnaturel": darkorange,
+        "scifi": dodgerblue,
+        "horreur": darkred,
+        "drame": darkslategray,
+        "post-apocalyptique": greenyellow,
+        "dystopie": darkmagenta,
+        "fantastique": darkorchid,
+        "comédie": limegreen,
+        "ecole": gold,
+        "tranche-de-vie": rgba(247, 182, 126, 0.795),
+        "cyberpunk": lightskyblue
+    );
+
     .card-genre
     {
-        display: inline;
         padding-left: 10px;
+        border-radius: 28px;
+        border: none;
+        display: inline-block;
+        cursor: pointer;
+        padding: 12px 27px;
+        text-decoration: none;
+        text-shadow: 0px 1px 0px #263666;
 
         @include implementTitle('VT');
+        @each $genreName, $color in $genre-colors
+        {
+            &-#{$genreName}
+            {
+                color: #fff;
+                @include card-genre-style($color, lighten($color, 20%));
+            }
+        }
     }
 
     .card-classification
