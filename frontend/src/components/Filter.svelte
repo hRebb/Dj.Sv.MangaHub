@@ -1,5 +1,6 @@
 <script lang="ts">
 	  import GenreFilter from "./GenreFilter.svelte";
+    import ClassificationFilter from "./ClassificationFilter.svelte";
     import Card from "./Card.svelte";
 
     import { showCardGrid } from "../utils/visibility";
@@ -42,7 +43,7 @@
       "Shonen",
       "Seinen",
       "Shojo",
-      "Manwha",
+      "Manwha"
     ];
   
     function filterBooksByGenre(genre: string) {
@@ -72,6 +73,10 @@
   <p>Filtrer par genre :</p>
   <GenreFilter options={genres} selectedOption={selectedGenre} filterBooks={filterBooksByGenre} />
 
+  <p>Filtrer par thème :</p>
+  <ClassificationFilter options={classifications} selectedOption={selectedClassification} filterBooks={filterBooksByClassification} />
+  
+
   <div class="filtered-books">
     {#each filteredBooks as book}
       <Card {book} />
@@ -83,6 +88,9 @@
     @use '../fonts/fonts';
     p {
       font-family: 'Aref Ruqaa Ink';
+      text-align: center;
+      font-weight: bold;
+      font-size: 25px;
     }
     .filter-container {
       margin-top: 20px;
