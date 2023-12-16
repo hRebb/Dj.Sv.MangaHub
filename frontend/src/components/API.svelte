@@ -3,6 +3,8 @@
     import Card from './Card.svelte';
     import Filter from './Filter.svelte';
 
+    import { showCardGrid } from '../utils/visibility';
+
     type Book = {
         id: number,
         title: string,
@@ -36,7 +38,7 @@
     <br>
 </span>
 
-<div class="card-grid">
+<div class="card-grid" style="display: {showCardGrid ? 'none' : 'grid'}">
     {#each books as book}
         <Card book={book} />
     {/each}

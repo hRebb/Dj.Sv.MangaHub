@@ -2,6 +2,8 @@
 	  import Button from "./Button.svelte";
     import Card from "./Card.svelte";
 
+    import { showCardGrid } from "../utils/visibility";
+
     export let books: {
       id: number;
       title: string;
@@ -16,22 +18,30 @@
     export let selectedGenre: string = 'All';
 
     let genres: string[] = [
-      "action",
-      "aventure",
-      "historique",
-      "mystère",
-      "policier",
-      "surnaturel",
-      "scifi",
-      "horreur",
-      "drame",
-      "post-apocalyptique",
-      "dystopie",
-      "fantastique",
-      "comédie",
-      "ecole",
-      "tranche-de-vie",
-      "cyberpunk"
+      "Action",
+      "Aventure",
+      "Historique",
+      "Mystère",
+      "Policier",
+      "Surnaturel",
+      "SciFi",
+      "Horreur",
+      "Drame",
+      "Post-Apocalyptique",
+      "Dystopie",
+      "Fantastique",
+      "Comédie",
+      "Ecole",
+      "Tranche de vie",
+      "Cyberpunk",
+      "All"
+    ];
+
+    let classifications: string[] = [
+      "Shonen",
+      "Seinen",
+      "Shojo",
+      "Manwha",
     ];
   
     function filterBooks(genre: string) {
@@ -42,10 +52,14 @@
           book.genre.some((g) => g.name === genre)
         );
       }
+      showCardGrid.set(selectedGenre === 'All');
     }
 </script>
   
 <div class="filter-container">
+    <p>
+      Filtrer par genre :
+    </p>
     <Button {genres} {selectedGenre} {filterBooks} />
   
     <div class="filtered-books">
@@ -55,8 +69,18 @@
     </div>
 </div>
   
-<style>
+<style lang="scss">
+    @use '../fonts/fonts';
+    p {
+      font-family: 'Aref Ruqaa Ink';
+    }
     .filter-container {
       margin-top: 20px;
+    }
+
+    .filtered-books {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
     }
 </style>  

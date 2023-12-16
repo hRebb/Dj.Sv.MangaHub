@@ -45,6 +45,8 @@
         @extend %template-btn;
         @include buttonStyle(#2dabf9, #0688fa);
 
+        margin: 10px 10px 10px 10px;
+
         &:hover
         {
             @include buttonStyle(#0688fa, #2dabf9);
@@ -60,6 +62,7 @@
     .filter-buttons
     {
       margin-bottom: 20px;
+      text-align: center;
     }
 </style>
   
