@@ -1,5 +1,5 @@
 <script lang="ts">
-	  import Button from "./Button.svelte";
+	  import GenreFilter from "./GenreFilter.svelte";
     import Card from "./Card.svelte";
 
     import { showCardGrid } from "../utils/visibility";
@@ -16,6 +16,7 @@
 
     export let filteredBooks: typeof books;
     export let selectedGenre: string = 'All';
+    export let selectedClassification: string = 'All';
 
     let genres: string[] = [
       "Action",
@@ -44,29 +45,38 @@
       "Manwha",
     ];
   
-    function filterBooks(genre: string) {
-      if (genre === 'All') {
+    function filterBooksByGenre(genre: string) {
+      selectedGenre = genre;
+      updateFilteredBooks();
+    }
+
+    function filterBooksByClassification(classification: string) {
+      selectedClassification = classification;
+      updateFilteredBooks();
+    }
+
+    function updateFilteredBooks() {
+      if (selectedGenre === 'All' && selectedClassification === 'All') {
         filteredBooks = books;
       } else {
         filteredBooks = books.filter((book) =>
-          book.genre.some((g) => g.name === genre)
+          (selectedGenre === 'All' || book.genre.some((g) => g.name === selectedGenre)) &&
+          (selectedClassification === 'All' || book.classification.some((c) => c.name === selectedClassification))
         );
       }
-      showCardGrid.set(selectedGenre === 'All');
+      showCardGrid.set(selectedGenre === 'All' && selectedClassification === 'All');
     }
 </script>
   
 <div class="filter-container">
-    <p>
-      Filtrer par genre :
-    </p>
-    <Button {genres} {selectedGenre} {filterBooks} />
-  
-    <div class="filtered-books">
-      {#each filteredBooks as book}
-        <Card {book} />
-      {/each}
-    </div>
+  <p>Filtrer par genre :</p>
+  <GenreFilter options={genres} selectedOption={selectedGenre} filterBooks={filterBooksByGenre} />
+
+  <div class="filtered-books">
+    {#each filteredBooks as book}
+      <Card {book} />
+    {/each}
+  </div>
 </div>
   
 <style lang="scss">
