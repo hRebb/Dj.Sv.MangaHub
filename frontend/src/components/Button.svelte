@@ -1,31 +1,25 @@
-<script>
-    export let label = "Button";
+<script lang="ts">
+  export let genres: string[];
+  export let selectedGenre: string;
+  export let filterBooks: (genre: string) => void;
+
+  function handleFilter(genre: string)
+  {
+    filterBooks(genre);
+  }
+</script>
   
-    let active = false;
-  
-    function handleMouseDown() {
-      active = true;
-    }
-  
-    function handleMouseUp() {
-      active = false;
-    }
-  </script>
-  
-  
-  
-<button
-    class="btn"
-    on:mousedown={handleMouseDown}
-    on:mouseup={handleMouseUp}
-    on:mouseleave={handleMouseUp}
->
-    {#if active}
-      <span class="active">{label}</span>
-    {:else}
-      {label}
-    {/if}
-</button>
+<div class="filter-buttons">
+  {#each genres as genre}
+    <button
+      class="btn"
+      on:click={() => handleFilter(genre)}
+      class:active={selectedGenre === genre}
+    >
+      {genre}
+    </button>
+  {/each}
+</div>
 
 <style lang="scss">
     @mixin buttonStyle($bg-color, $hover-color)
@@ -63,5 +57,11 @@
         }
     }
 
+    .filter-buttons
+    {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 20px;
+    }
 </style>
   

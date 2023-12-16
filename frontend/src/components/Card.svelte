@@ -80,7 +80,7 @@
     @mixin card-genre-style($bg-color, $hover-color)
     {
         box-shadow: inset 0px -7px 7px 0px darken($bg-color, 20%);
-        background: linear-gradient(to bottom, $bg-color 5%, $hover-color 100%);
+        background: linear-gradient(to bottom, $bg-color 70%, $hover-color 100%);
         background-color: $bg-color;
     }
 
@@ -133,6 +133,12 @@
     {
         list-style-type: none;
         text-align: center;
+    }
+
+    .card-rate
+    {
+        font-size: 20px;
+        font-style: oblique;
     }
 
     $genre-colors: (
