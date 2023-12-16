@@ -59,8 +59,6 @@
 
     .filter-buttons
     {
-      display: flex;
-      justify-content: space-around;
       margin-bottom: 20px;
     }
 </style>

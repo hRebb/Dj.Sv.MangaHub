@@ -59,10 +59,4 @@
     .filter-container {
       margin-top: 20px;
     }
-  
-    .filtered-books {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 20px;
-    }
 </style>  

@@ -1,6 +1,7 @@
 <script lang="ts">
     import { onMount } from 'svelte';
     import Card from './Card.svelte';
+    import Filter from './Filter.svelte';
 
     type Book = {
         id: number,
@@ -13,6 +14,8 @@
     };
 
     let books: Book[] = [];
+    let filteredBooks: Book[] = [];
+    let selectedGenre: string = 'All';
 
     onMount(async () => {
         try {
@@ -28,6 +31,11 @@
     });
 </script>
 
+<span class="filter-list-btn">
+    <Filter {books} bind:filteredBooks bind:selectedGenre />
+    <br>
+</span>
+
 <div class="card-grid">
     {#each books as book}
         <Card book={book} />
@@ -35,6 +43,11 @@
 </div>
 
 <style lang="scss">
+    .filter-list-btn
+    {
+        display: list-item;
+    }
+
     .card-grid {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
